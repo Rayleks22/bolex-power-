@@ -498,6 +498,7 @@ li { margin-bottom: 0.45rem; }
 
 /* steps (How we work) */
 .steps { counter-reset: step; }
+.grid-4.steps-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 260px)); }
 .step {
   position: relative;
   background: var(--white);
