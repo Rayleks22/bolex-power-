@@ -1,0 +1,6 @@
+# Robots.txt for Bolex Power Solutions
+# Update the Sitemap line below once the real domain is registered.
+User-agent: *
+Allow: /
+
+Sitemap: https://bolexpower.com/sitemap.xml
