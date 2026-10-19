@@ -27,7 +27,7 @@
     });
     // close the menu after tapping a link (mobile)
     navLinks.addEventListener("click", function (e) {
-      if (e.target.tagName === "A" && window.innerWidth < 960) {
+      if (e.target.tagName === "A" && window.innerWidth < 1060) {
         navLinks.classList.remove("open");
         navToggle.setAttribute("aria-expanded", "false");
       }
