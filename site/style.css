@@ -47,6 +47,7 @@ body {
   color: var(--ink);
   background: var(--white);
   -webkit-font-smoothing: antialiased;
+  overflow-x: clip; /* never allow sideways overflow (mobile browsers shrink pages that overflow) */
 }
 
 img { max-width: 100%; height: auto; display: block; }
@@ -174,16 +175,18 @@ li { margin-bottom: 0.45rem; }
   align-items: center;
   gap: 10px;
   text-decoration: none !important;
-  flex-shrink: 0;
+  min-width: 0; /* let the wordmark shrink instead of pushing past the screen */
 }
-.logo img { width: 42px; height: auto; }
-.logo-word { line-height: 1.05; }
+.logo img { width: 42px; height: auto; flex-shrink: 0; }
+.logo-word { line-height: 1.05; min-width: 0; overflow: hidden; }
 .logo-word .l1 {
   font-family: var(--font-head);
   font-weight: 800;
   font-size: 1.05rem;
   letter-spacing: 0.01em;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .logo-word .l1 .a { color: var(--navy); }
 .logo-word .l1 .b { color: var(--green); }
@@ -313,6 +316,17 @@ li { margin-bottom: 0.45rem; }
   white-space: nowrap;
 }
 @media (min-width: 1060px) { .btn-call-mob { display: none; } }
+
+/* Very narrow phones (or large system font sizes): compact the header row so
+   it can never become wider than the screen. */
+@media (max-width: 430px) {
+  .logo img { width: 34px; }
+  .logo-word .l1 { font-size: 0.95rem; }
+  .logo-word .l2 { display: none; }
+  .btn-call-mob .call-text { display: none; }
+  .btn-call-mob { padding: 10px 12px; }
+  .header .container { gap: 8px; }
+}
 
 /* --------------------------------------------------------------------------
    Hero
