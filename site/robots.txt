@@ -3,4 +3,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bolexpower.com/sitemap.xml
+Sitemap: https://bolexpower.com.ng/sitemap.xml

@@ -24,12 +24,14 @@
     navToggle.addEventListener("click", function () {
       var open = navLinks.classList.toggle("open");
       navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+      document.body.classList.toggle("nav-open", open);
     });
     // close the menu after tapping a link (mobile)
     navLinks.addEventListener("click", function (e) {
       if (e.target.tagName === "A" && window.innerWidth < 1060) {
         navLinks.classList.remove("open");
         navToggle.setAttribute("aria-expanded", "false");
+        document.body.classList.remove("nav-open");
       }
     });
   }

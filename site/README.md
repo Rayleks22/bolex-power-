@@ -64,7 +64,7 @@ All photos live in `images/` with clear names (`solar-roof-01.jpg`,
   real customer testimonials, open `index.html`, find `hidden` in
   `<section class="section testimonials" hidden>`, delete the word `hidden`, and
   add the quotes inside. (Never invent testimonials.)
-- **Domain:** the files use `https://bolexpower.com` in `sitemap.xml`, `robots.txt`
+- **Domain:** the files use `https://bolexpower.com.ng` in `sitemap.xml`, `robots.txt`
   and the "canonical/OG" tags inside each page's `<head>`. Once the real domain is
   bought, update those to match.
 - **Google Business Profile:** create one (free) for local customers — add the same
@@ -95,7 +95,7 @@ automatically.
    - Click **Save and Deploy**.
 4. Your site is live on a `*.pages.dev` address within a minute. From now on,
    every `git push` deploys automatically — no uploads needed.
-5. To use your own domain (e.g. `bolexpower.com`): buy it from any registrar
+5. To use your own domain (e.g. `bolexpower.com.ng`): buy it from any registrar
    (Namecheap, GoDaddy, Whogohost…), then in Cloudflare Pages → **Custom domains**
    → add it and follow the DNS steps. After that, update the domain in
    `sitemap.xml`, `robots.txt` and the canonical/OG tags in each page's `<head>`.

@@ -276,10 +276,14 @@ li { margin-bottom: 0.45rem; }
     background: var(--white);
     border-bottom: 1px solid var(--line);
     box-shadow: var(--shadow-lg);
-    padding: 12px 20px 20px;
+    padding: 12px 20px 28px;
     max-height: calc(100vh - var(--header-h));
+    max-height: calc(100dvh - var(--header-h));
     overflow-y: auto;
+    overscroll-behavior: contain;
   }
+  /* keep the floating WhatsApp button from covering menu items */
+  body.nav-open .wa-float { display: none; }
   .nav-links.open a { padding: 13px 10px; border-bottom: 1px solid var(--line); }
   .nav-links.open .drop {
     display: block;
